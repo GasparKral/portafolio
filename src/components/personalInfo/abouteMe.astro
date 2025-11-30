@@ -1,0 +1,28 @@
+---
+import { getLangFromURL, useTranslation } from '@/scripts/in18/hooks';
+import { Separator } from '@/components/ui/separator';
+
+const lang = getLangFromURL(Astro.url);
+const t = useTranslation(lang);
+---
+
+<section
+    class='my-20 mb-12 w-4xl items-start justify-center flex flex-col gap-4 mx-auto font-light text-lg'
+    id='about-me'
+>
+    <h2
+        class='text-3xl md:text-4xl font-bold'
+        set:html={t('AboutMe.Title')}
+    />
+    <div class='flex flex-row mt-6'>
+        <div class='border border-primary/45 mr-4'></div>
+        <div class='flex flex-col gap-3'>
+            <p>
+                {t('AboutMe.Description')}
+            </p>
+            <p>
+                {t('AboutMe.WhatILikeToDo')}
+            </p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,8 @@
+{
+    "scope": "frontend",
+    "name": "ReactJS",
+    "description": "ReactJS (commonly known as React) is an open-source JavaScript library developed by Facebook. It is primarily used for building dynamic and interactive user interfaces (UIs) for web applications. Its core concept is the use of reusable components—self-contained pieces of code that manage their own logic and appearance. React is known for its use of a virtual DOM, which makes updating the user interface highly efficient and fast.",
+    "opinion": "It's the frontend environment I'm most familiar with.",
+    "rate": 5,
+    "ecosystem": "ReactJS"
+}

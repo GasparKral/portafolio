@@ -1,0 +1,80 @@
+---
+import { getLangFromURL, useTranslation } from '@/scripts/in18/hooks';
+
+import { ArrowDown } from 'lucide-react';
+import { CvDownload } from './cvDowload';
+import { ClipboardEmail } from './clipboardEmail';
+
+const lang = getLangFromURL(Astro.url);
+const t = useTranslation(lang);
+---
+
+<section
+    class='flex flex-col items-center justify-center min-h-screen relative gap-8'
+    id='hero'
+>
+    <h1
+        class='whitespace-pre text-3xl font-extralight'
+        set:html={t('Hero.Title', { name: 'Gaspar Gómez Kral' })}
+    />
+    <div
+        class='flex gap-4 opacity-0'
+        id='fastContact'
+    >
+        <ClipboardEmail
+            email='gaspargkral@gmail.com'
+            succesMessage={t('General.EmailCopied')}
+            errorMessage={t('General.EmailCopyError')}
+            client:load
+        />
+        <CvDownload text={t('General.DownloadCv')} />
+    </div>
+    <button
+        class='absolute bottom-10 animate-bounce duration-10000 ease-[cubic-bezier(0,.98,.23,1.38)] cursor-pointer'
+        aria-label='Scroll down'
+    >
+        <ArrowDown className='w-6 h-6 text-primary/70' />
+    </button>
+    <script type='module'>
+        import {
+            scroll,
+            animate,
+        } from 'https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm';
+
+        const button = document.querySelector(
+            'button[aria-label="Scroll down"]'
+        );
+        const container = document.getElementById('hero');
+
+        button.addEventListener('click', () => {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth',
+            });
+        });
+
+        // Title fade in on first load
+        const title = container.querySelector('h1');
+        animate(
+            title,
+            { opacity: [0, 1], y: [-20, 0] },
+            { duration: 2, easing: 'ease-out' }
+        );
+
+        // delay 3s fastContact fade in
+        const fastContact = container.querySelector('#fastContact');
+        setTimeout(() => {
+            animate(
+                fastContact,
+                { opacity: [0, 1], y: [-20, 0] },
+                { duration: 1, easing: 'ease-out' }
+            );
+        }, 3000);
+
+        // Fade out section on scroll
+        scroll(animate(container, { opacity: [1, 0] }), {
+            target: container,
+            offset: ['start start', '90% 25%'],
+        });
+    </script>
+</section>

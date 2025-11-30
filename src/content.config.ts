@@ -3,28 +3,39 @@ import { glob } from 'astro/loaders';
 
 const projects = defineCollection({
     loader: glob({
-        pattern: '*.json',
+        pattern: '**/*.json',
         base: 'src/content/projects/',
     }),
     schema: z.object({
         title: z.string(),
         description: z.string(),
-        repo_link: z.string().url().optional(),
-        live_link: z.string().url().optional(),
+        links: z.object({
+            repository: z.string().url().optional(),
+            live: z.string().url().optional(),
+        }),
         technologies: z.array(reference('technologies')).optional(),
+        color: z.string().optional().default('#fafafa'),
     }),
 });
 
+export const techScopeEnum = z.enum([
+    'frontend',
+    'backend',
+    'database',
+    'other',
+]);
+
 const technologies = defineCollection({
     loader: glob({
-        pattern: '(es|en)/**/*.json',
+        pattern: '**/**/*.json',
         base: 'src/content/technologies/',
     }),
     schema: z.object({
-        scope: z.enum(['frontend', 'backend', 'database', 'other']),
+        scope: techScopeEnum,
         name: z.string(),
-        opinion: z.string(),
-        rate: z.number().min(1).max(5).default(5),
+        description: z.string(),
+        opinion: z.string().optional(),
+        rate: z.number().multipleOf(0.5).min(0).max(10).default(5),
         logo: z.string().optional(),
         ecosystem: z.string(),
         ecosystem_logo: z.string().optional(),

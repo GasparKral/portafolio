@@ -1,0 +1,14 @@
+{
+    "title": "FitMe",
+    "description": "Una sistema completo de Servidor + Desktop desarrollado para el entrenamiento y los aficionados a los deportes intercomunicación, planificación de ejercicios y seguimiento de progreso.",
+    "links": {
+        "repository": "https://github.com/GasparKral/Fit-me/tree/main"
+    },
+    "technologies": [
+        "Ktor",
+        "Kotlin",
+        "Jetpack Compose",
+        "Kotlin Multiplatform (KTM)"
+    ],
+    "color": "#FF5722"
+}

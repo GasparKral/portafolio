@@ -1,0 +1,8 @@
+{
+    "scope": "frontend",
+    "name": "JavaFX",
+    "description": "JavaFX es un framework robusto para crear aplicaciones de escritorio sofisticadas en Java. Ofrece una amplia gama de componentes de interfaz de usuario y es compatible con principios de diseño modernos, lo que facilita la creación de aplicaciones visualmente atractivas. La integración de JavaFX con CSS y FXML permite una clara separación entre diseño y lógica, lo que mejora la facilidad de mantenimiento. Además, su compatibilidad con multimedia, gráficos 3D y aceleración de hardware lo hace ideal para aplicaciones complejas. En resumen, JavaFX es una opción sólida para desarrolladores que buscan crear aplicaciones de escritorio multiplataforma con una experiencia de usuario enriquecida.",
+    "rate": 2,
+    "ecosystem": "Oracle",
+    "ecosystem_logo": "/images/logos/oracle.svg"
+}

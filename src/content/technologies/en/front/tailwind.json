@@ -1,0 +1,7 @@
+{
+    "scope": "frontend",
+    "name": "TailwindCSS",
+    "description": "Tailwind CSS is a utility-first CSS framework. Unlike traditional frameworks like Bootstrap that provide pre-designed components (like buttons or navbars), Tailwind gives you low-level utility classes to build custom designs directly in your HTML.",
+    "rate": 4.5,
+    "ecosystem": "Web"
+}

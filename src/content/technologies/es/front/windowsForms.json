@@ -1,0 +1,7 @@
+{
+    "scope": "frontend",
+    "name": "Windorws Form",
+    "description": "Windows Forms, también conocido como WinForms, es una biblioteca de clases de interfaz gráfica de usuario (GUI) gratuita y de código abierto para crear aplicaciones de escritorio de Windows.",
+    "rate": 2,
+    "ecosystem": "Microsoft"
+}

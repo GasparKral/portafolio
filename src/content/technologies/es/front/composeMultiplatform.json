@@ -1,0 +1,7 @@
+{
+    "scope": "frontend",
+    "name": "Compose Multiplatform",
+    "description": "Compose Multiplatform es un marco de interfaz de usuario declarativo de JetBrains que permite a los desarrolladores compartir código Kotlin en múltiples plataformas, incluidas Android, iOS, escritorio y web (en versión beta).",
+    "rate": 3.5,
+    "ecosystem": "Kotlin"
+}

@@ -1,0 +1,8 @@
+{
+    "scope": "other",
+    "name": "Docker",
+    "description": "Docker es una plataforma de código abierto que automatiza la implementación de aplicaciones dentro de contenedores ligeros y portátiles. Un contenedor empaqueta una aplicación con todos sus componentes necesarios, como bibliotecas y otras dependencias, y la distribuye en un único paquete. Esto garantiza que la aplicación se ejecute de la misma manera en cualquier entorno, ya sea en el portátil personal de un desarrollador, un servidor de pruebas o una nube de producción.",
+    "opinion": "No me gusta Docker, realmente conozco su utilidad, pero a veces todavía me confundo al usarlo.",
+    "rate": 3,
+    "ecosystem": "Deploy"
+}

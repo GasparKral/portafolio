@@ -1,0 +1,8 @@
+{
+    "scope": "backend",
+    "name": "Ktor",
+    "description": "Ktor es un framework potente y flexible para crear servidores y clientes asíncronos en Kotlin. Su ligereza y arquitectura modular facilitan la creación de aplicaciones escalables. La integración fluida con las corrutinas de Kotlin permite una gestión eficiente de solicitudes concurrentes, mejorando así el rendimiento. La extensibilidad de Ktor mediante plugins permite a los desarrolladores personalizar sus aplicaciones para satisfacer necesidades específicas. En resumen, Ktor es una excelente opción para los desarrolladores de Kotlin que buscan crear aplicaciones y servicios web modernos.",
+    "opinion": "Realmente disfruto trabajando con Ktor, es intuitivo, fácil de manejar y hace que el proceso de desarrollo sea muy divertido.",
+    "rate": 5,
+    "ecosystem": "Kotlin"
+}

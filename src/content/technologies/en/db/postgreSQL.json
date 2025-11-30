@@ -1,0 +1,7 @@
+{
+    "scope": "database",
+    "name": "PostgreSQL",
+    "description": "PostgreSQL is an advanced, enterprise-class open-source relational database that supports both SQL (relational) and JSON (non-relational) querying",
+    "rate": 4,
+    "ecosystem": "SQL"
+}

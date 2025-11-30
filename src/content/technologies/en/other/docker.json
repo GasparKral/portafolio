@@ -1,0 +1,8 @@
+{
+    "scope": "other",
+    "name": "Docker",
+    "description": "Docker is an open-source platform that automates the deployment of applications inside lightweight, portable containers. A container packages an application with all its necessary parts, such as libraries and other dependencies, and ships it all out as one single package. This guarantees that the application will run the same way in any environment, whether it's on a developer's personal laptop, a test server, or a production cloud.",
+    "opinion": "I'm not into docker, I really know it utility, but I'm still confused about it sometimes.",
+    "rate": 3,
+    "ecosystem": "Deploy"
+}

@@ -7,9 +7,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-
-	site: 'https://io.github.com/gasparkral/portfolio',
-	output: 'static',
+    site: 'https://io.github.com/gasparkral/portfolio',
+    output: 'static',
 
     vite: {
         plugins: [tailwindcss()],
@@ -21,7 +20,7 @@ export default defineConfig({
         locales: ['es', 'en'],
         defaultLocale: 'es',
         routing: {
-            prefixDefaultLocale: false,
+            prefixDefaultLocale: true,
         },
     },
 });

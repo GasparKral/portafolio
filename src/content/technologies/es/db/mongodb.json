@@ -1,0 +1,7 @@
+{
+    "scope": "database",
+    "name": "MongoDB",
+    "description": "MongoDB es una base de datos NoSQL de código abierto y orientada a documentos que almacena datos en documentos flexibles similares a JSON en lugar de tablas y filas tradicionales.",
+    "rate": 2.5,
+    "ecosystem": "NonSQL"
+}

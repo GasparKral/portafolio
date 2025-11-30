@@ -1,0 +1,28 @@
+---
+const {
+    link,
+    label,
+    style,
+    color = 'var(--primary)',
+} = Astro.props as {
+    link: string;
+    label: string;
+    style?: string;
+    color?: string;
+};
+---
+
+<a
+    href={link}
+    target='_blank'
+    rel='noopener noreferrer'
+    style={{ '--btn-color': color }}
+    class:list={[
+        'p-2 rounded-xs transition-colors duration-200 flex items-center cursor-pointer gap-2',
+        style,
+        'hover:text-(--btn-color) hover:bg-(--btn-color)/20 active:bg-(--btn-color) active:text-primary',
+    ]}
+>
+    <slot />
+    {label}
+</a>

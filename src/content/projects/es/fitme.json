@@ -1,0 +1,14 @@
+{
+    "title": "FitMe",
+    "description": "A full system developed for trainer and sports enthusiasts intercommunication, workout planning, and progress tracking.",
+    "links": {
+        "repository": "https://github.com/GasparKral/Fit-me/tree/main"
+    },
+    "technologies": [
+        "Ktor",
+        "Kotlin",
+        "Jetpack Compose",
+        "Kotlin Multiplatform (KTM)"
+    ],
+    "color": "#FF5722"
+}

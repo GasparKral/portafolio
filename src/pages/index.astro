@@ -1,36 +1,4 @@
----
-import '../styles/global.css';
-import { TechnologiesContainer } from '../components/technologies/container';
-import { getCollection } from 'astro:content';
-
-const locale = Astro.request.headers.get('accept-language')?.startsWith('es')
-    ? 'es'
-    : 'en';
-
-const technologies = await getCollection('technologies').then((techs) =>
-    techs.filter((tech) => tech.filePath.includes(`${locale}/`))
-);
----
-
-<html lang={locale}>
-    <head>
-        <meta charset='utf-8' />
-        <link
-            rel='icon'
-            type='image/svg+xml'
-            href='/favicon.svg'
-        />
-        <meta
-            name='viewport'
-            content='width=device-width'
-        />
-        <title>Gaspar Gómez Kral</title>
-    </head>
-    <body>
-        <slot />
-        <TechnologiesContainer
-            client:load
-            techs={technologies}
-        />
-    </body>
-</html>
+<meta
+    http-equiv='refresh'
+    content='0;url=/en/'
+/>

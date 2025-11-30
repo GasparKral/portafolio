@@ -1,0 +1,8 @@
+{
+    "scope": "frontend",
+    "name": "Jetpack Compose",
+    "description": "Jetpack Compose is Android’s recommended modern toolkit for building native UI. It simplifies and accelerates UI development on Android. Quickly bring your app to life with less code, powerful tools, and intuitive Kotlin APIs. ",
+    "opinion": "At the beggining it's a bit confusing, but after a while you'll get used to it and it'll be easy to use.",
+    "rate": 3.5,
+    "ecosystem": "Kotlin"
+}

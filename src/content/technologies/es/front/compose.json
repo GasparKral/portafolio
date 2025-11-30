@@ -1,0 +1,8 @@
+{
+    "scope": "frontend",
+    "name": "Jetpack Compose",
+    "description": "Jetpack Compose es el kit de herramientas moderno recomendado por Android para crear interfaces de usuario nativas. Simplifica y acelera el desarrollo de interfaces de usuario en Android. Dale vida a tu aplicación rápidamente con menos código, herramientas potentes y APIs Kotlin intuitivas.",
+    "opinion": "Al principio es un poco confuso, pero con el tiempo te acostumbrarás y será fácil de usar.",
+    "rate": 3.5,
+    "ecosystem": "Kotlin"
+}

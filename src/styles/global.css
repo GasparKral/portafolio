@@ -1,9 +1,18 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('/fonts/Outfit-Variable.ttf') format('truetype-variations');
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+    --font-outfit: 'Outfit', sans-serif;
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
@@ -64,7 +73,7 @@
     --secondary-foreground: oklch(0.988 0 0);
 
     /* Muted con gris suave */
-    --muted: oklch(0.96 0 0);
+    --muted: oklch(92.494% 0.00011 271.152);
     --muted-foreground: oklch(0.655 0.075 252.5);
 
     /* Accento (#035afc) */
@@ -159,4 +168,13 @@
     body {
         @apply bg-background text-foreground;
     }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

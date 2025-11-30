@@ -1,0 +1,9 @@
+{
+    "scope": "other",
+    "name": "Lightroom",
+    "description": "Lightroom es una aplicación de edición y organización de fotografías desarrollada por Adobe. Está diseñada para fotógrafos profesionales y aficionados, ofreciendo herramientas avanzadas para la gestión y mejora de imágenes.",
+    "opinion": "Es una herramienta potente que adoro usar, sobre todo su versión móvil, que cubre en su mayoría mis necesidades para mi pasatiempo de fotografía.",
+    "rate": 5,
+    "ecosystem": "Adobe",
+    "ecosystem_logo": "/images/logos/adobe.svg"
+}

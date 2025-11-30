@@ -1,8 +1,8 @@
 {
     "scope": "database",
     "name": "AstroDB",
-    "opinion": "AstroDB provides an excellent balance between performance and ease of use. Its serverless architecture allows for quick setup and deployment, making it ideal for developers looking to build applications without the overhead of managing traditional databases.",
+    "description": "AstroDB provides an excellent balance between performance and ease of use. Its serverless architecture allows for quick setup and deployment, making it ideal for developers looking to build applications without the overhead of managing traditional databases.",
     "rate": 4,
     "ecosystem": "Astro",
-    "ecosystem_logo": "/images/technologies/astro-logo.png"
+    "ecosystem_logo": "/images/logos/astro.svg"
 }

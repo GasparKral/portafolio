@@ -1,0 +1,8 @@
+{
+    "scope": "database",
+    "name": "Microsoft Access",
+    "description": "Microsoft Access is a database management system (DBMS) from Microsoft that helps users create and manage databases, and build database applications without being a professional developer",
+    "opinion": "Why it doesn't have a SQL API?",
+    "rate": 1,
+    "ecosystem": "Microsoft"
+}

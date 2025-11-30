@@ -1,0 +1,8 @@
+{
+    "scope": "backend",
+    "name": "Exposed",
+    "description": "Kotlin Exposed es una biblioteca SQL ligera (un framework ORM) para Kotlin. Ofrece dos capas de interacción con bases de datos:\nDSL (Lenguaje Específico de Dominio): Una forma segura de escribir y ejecutar consultas SQL, adaptada al lenguaje Kotlin, que permite trabajar con bases de datos sin escribir cadenas SQL sin formato.\nDAO (Objetos de Acceso a Datos): Una API orientada a objetos que permite tratar las filas de la base de datos como objetos Kotlin.",
+    "opinion": "Es una tecnología que me gusta mucho utilizar, es muy cómodo trabajar con ella.",
+    "rate": 5,
+    "ecosystem": "Kotlin"
+}

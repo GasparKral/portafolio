@@ -1,0 +1,13 @@
+{
+    "title": "Compose Desktop Router",
+    "description": "An self designed router for Jetpack Compose Desktop applications.",
+    "technologies": [
+        "Kotlin",
+        "Jetpack Compose Desktop",
+        "Router",
+        "Open Source"
+    ],
+    "links": {
+        "repository": "https://github.com/GasparKral/Compose-Desktop-Router"
+    }
+}

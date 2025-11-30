@@ -1,0 +1,7 @@
+{
+    "scope": "frontend",
+    "name": "Windorws Form",
+    "description": "Windows Forms, also known as WinForms, is a free, open-source graphical user interface (GUI) class library for building Windows desktop applications",
+    "rate": 2,
+    "ecosystem": "Microsoft"
+}

@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+
+import LanguagePicker from '@/components/general/swithLang';
+
+import { Toaster } from '@/components/ui/sonner';
+
+const locale = Astro.currentLocale;
+---
+
+<html lang={locale}>
+    <head>
+        <meta charset='utf-8' />
+        <title>Gaspar Gómez Kral</title>
+        <meta
+            name='viewport'
+            content='width=device-width'
+        />
+        <meta
+            name='author'
+            content='Gaspar Gómez Kral'
+        />
+        <meta
+            name='description'
+            content="Gaspar Gómez Kral's personal website"
+        />
+        <meta
+            name='keywords'
+            content='Gaspar Gómez Kral, Gaspar Kral, Gaspar, Gómez Kral, Portfolio'
+        />
+    </head>
+    <body class='dark font-outfit pb-32'>
+        <Toaster
+            position='top-center'
+            client:load
+        />
+        <LanguagePicker
+            className='fixed right-2 top-2 bg-muted px-1 rounded-xs z-50'
+            currentLang={locale}
+            client:load
+        />
+        <slot />
+    </body>
+</html>

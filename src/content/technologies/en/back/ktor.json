@@ -1,7 +1,8 @@
 {
     "scope": "backend",
     "name": "Ktor",
-    "opinion": "Ktor is a powerful and flexible framework for building asynchronous servers and clients in Kotlin. Its lightweight nature and modular architecture make it easy to create scalable applications. The seamless integration with Kotlin coroutines allows for efficient handling of concurrent requests, enhancing performance. Ktor's extensibility through plugins enables developers to customize their applications to meet specific needs. Overall, Ktor is an excellent choice for Kotlin developers looking to build modern web applications and services.",
+    "description": "Ktor is a powerful and flexible framework for building asynchronous servers and clients in Kotlin. Its lightweight nature and modular architecture make it easy to create scalable applications. The seamless integration with Kotlin coroutines allows for efficient handling of concurrent requests, enhancing performance. Ktor's extensibility through plugins enables developers to customize their applications to meet specific needs. Overall, Ktor is an excellent choice for Kotlin developers looking to build modern web applications and services.",
+    "opinion": "I really enjoy working with Ktor, it's intuitive, easy to handle and makes the development process a lot of fun.",
     "rate": 5,
-    "ecosystem": "JetBrains"
+    "ecosystem": "Kotlin"
 }

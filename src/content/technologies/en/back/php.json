@@ -1,0 +1,8 @@
+{
+    "scope": "backend",
+    "name": "PHP - Xampp",
+    "description": "XAMPP is a completely free and easy-to-install Apache distribution that includes MariaDB, PHP, and Perl. The XAMPP installation package has been designed to be incredibly easy to install and use.",
+    "opinion": "I had to use Xampp to my degree, but I don't really like de php development ecosystem.",
+    "rate": 0,
+    "ecosystem": "PHP"
+}

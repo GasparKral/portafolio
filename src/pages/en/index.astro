@@ -1,0 +1,38 @@
+---
+import GeneralLayout from '@/layouts/generalLayout.astro';
+import TechnologiesContainer from '../../components/technologies/container';
+import Hero from '@/components/personalInfo/hero.astro';
+import AbouteMe from '@/components/personalInfo/abouteMe.astro';
+import Contact from '@/components/personalInfo/contact.astro';
+
+import { getCollection } from 'astro:content';
+import { techScopeEnum } from '../../content.config';
+import { ProjectsContainer } from '@/components/projects/container';
+
+const techs = (
+    await getCollection('technologies', ({ id }) => id.startsWith('en'))
+).sort((a, b) => b.data.rate - a.data.rate);
+
+const projects = await getCollection('projects', ({ id }) =>
+    id.startsWith('en')
+);
+---
+
+<GeneralLayout>
+    <Hero client:load />
+    <AbouteMe />
+    <TechnologiesContainer
+        title="Technologies I've used"
+        seachPlaceholder='Search technologies...'
+        techs={techs}
+        tabs={techScopeEnum.options}
+        client:load
+    />
+    <ProjectsContainer
+        title='Some of my projects'
+        projects={projects}
+        labels={['Repository Link', 'Live Demo']}
+        client:load
+    />
+    <Contact client:load />
+</GeneralLayout>

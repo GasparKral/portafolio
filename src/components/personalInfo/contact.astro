@@ -1,0 +1,66 @@
+---
+import SocialLink from '@/components/personalInfo/socialLink.astro';
+
+import { Instagram, Github, Linkedin } from 'lucide-react';
+import { getLangFromURL, useTranslation } from '@/scripts/in18/hooks';
+import { ClipboardEmail } from './clipboardEmail';
+import { CvDownload } from './cvDowload';
+
+const lang = getLangFromURL(Astro.url);
+const t = useTranslation(lang);
+---
+
+<section class='w-4xl items-start justify-center ml-auto flex flex-col gap-4'>
+    <h3
+        set:html={t('Contact.Title')}
+        class='font-bold text-2xl'
+    />
+    <div class='flex gap-2'>
+        <ClipboardEmail
+            email='gaspargkral@gmail.com'
+            succesMessage={t('General.EmailCopied')}
+            errorMessage={t('General.EmailCopyError')}
+        />
+        <CvDownload text={t('General.DownloadCv')} />
+    </div>
+    <article>
+        <header>
+            <h4
+                class='text-xl font-semibold'
+                set:html={t('Contact.Social.Title')}
+            />
+        </header>
+        <div class='flex gap-2'>
+            <SocialLink
+                label='@_gkral'
+                link='https://www.instagram.com/_gkral/'
+                color='#C13584'
+            >
+                <Instagram
+                    width={24}
+                    height={24}
+                />
+            </SocialLink>
+            <SocialLink
+                label='GasparDev'
+                link='https://github.com/GasparKral'
+            >
+                <Github
+                    width={24}
+                    height={24}
+                />
+            </SocialLink>
+            <SocialLink
+                label='Gaspar Gómez Kral'
+                link='https://www.linkedin.com/in/gaspar-gómez-kral-533408270'
+                color='#0077B5'
+            >
+                <Linkedin
+                    width={24}
+                    height={24}
+                    fill='currentColor'
+                />
+            </SocialLink>
+        </div>
+    </article>
+</section>
