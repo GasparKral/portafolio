@@ -3,6 +3,6 @@
     "name": "Astro",
     "description": "Astro es un moderno framework front-end diseñado para crear sitios web rápidos y centrados en el contenido. Permite a los desarrolladores crear componentes utilizando frameworks populares como React, Vue y Svelte, a la vez que optimiza el rendimiento al enviar solo el JavaScript necesario al cliente. La arquitectura de isla de Astro permite la hidratación parcial, lo que significa que solo las partes interactivas de la página cargan JavaScript, lo que resulta en tiempos de carga más rápidos y una mejor experiencia de usuario. Con su enfoque en el rendimiento, la simplicidad y la flexibilidad, Astro es una excelente opción para desarrolladores que buscan crear aplicaciones web de alto rendimiento.",
     "rate": 4,
-    "logo": "/images/logos/astro.svg",
+    "logo": "/portafolio/images/logos/astro.svg",
     "ecosystem": "JavaScript"
 }
