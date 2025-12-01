@@ -1,4 +1,32 @@
-<meta
-    http-equiv='refresh'
-    content='0;url=/portafolio/es/'
-/>
+---
+import '../styles/global.css';
+const redirectTo = '/portafolio/es/';
+---
+
+<!doctype html>
+<html lang='es'>
+    <head>
+        <meta charset='UTF-8' />
+        <meta
+            http-equiv='refresh'
+            content='0;url={redirectTo}'
+        />
+        <link
+            rel='canonical'
+            href={redirectTo}
+        />
+        <script>
+            window.location.replace('{redirectTo}');
+        </script>
+        <title>Redirigiendo...</title>
+    </head>
+    <body class='dark'>
+        <!-- Fallback por si JavaScript está deshabilitado -->
+        <noscript>
+            <meta
+                http-equiv='refresh'
+                content='0;url={redirectTo}'
+            />
+        </noscript>
+    </body>
+</html>
