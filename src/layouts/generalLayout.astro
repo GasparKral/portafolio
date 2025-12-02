@@ -42,7 +42,6 @@ const locale = Astro.currentLocale;
         <LanguagePicker
             className='fixed right-2 top-2 bg-muted px-1 rounded-xs z-50'
             currentLang={locale}
-            baseUrl={import.meta.env.BASE_URL}
             client:load
         />
         <slot />

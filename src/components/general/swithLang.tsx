@@ -11,21 +11,18 @@ import {
 const LanguagePicker = ({
     className,
     currentLang,
-    baseUrl = '/',
 }: {
     className?: string;
     currentLang: string;
-    baseUrl?: string;
 }) => {
     const defaultValue = currentLang === 'es' ? 'Español 🇪🇸' : 'English 🇬🇧';
 
     const handleChange = (newLang: string) => {
         if (newLang === currentLang) return;
-        
-        // Construir la nueva ruta
-        const newPath = `${baseUrl}${newLang}/`;
-        
-        // Forzar recarga completa
+        const newPath = window.location.pathname.replace(
+            `/${currentLang}`,
+            `/${newLang}`
+        );
         window.location.href = newPath;
     };
 
