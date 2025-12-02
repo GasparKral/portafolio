@@ -11,25 +11,22 @@ import {
 const LanguagePicker = ({
     className,
     currentLang,
+    baseUrl = '/',
 }: {
     className?: string;
     currentLang: string;
+    baseUrl?: string;
 }) => {
     const defaultValue = currentLang === 'es' ? 'Español 🇪🇸' : 'English 🇬🇧';
 
     const handleChange = (newLang: string) => {
-        if (newLang == currentLang) return;
-        const currentPath = window.location.pathname;
+        if (newLang === currentLang) return;
         
-        // Manejar la base path de GitHub Pages (/portfolio/)
-        const pathParts = currentPath.split('/').filter(Boolean);
-        const basePath = pathParts[0]; // 'portfolio'
+        // Construir la nueva ruta
+        const newPath = `${baseUrl}${newLang}/`;
         
-        // Construir la nueva ruta: /portfolio/[newLang]/
-        const newPath = `/${basePath}/${newLang}/`;
-        
-        // Forzar recarga completa para que Astro re-renderice todo
-        window.location.replace(newPath);
+        // Forzar recarga completa
+        window.location.href = newPath;
     };
 
     return (

@@ -1,5 +1,5 @@
 ---
-
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <div>
@@ -7,6 +7,6 @@
     <p>Page not found</p>
     <p>
         seems like you got lost, go back to
-        <a href='/en/'>the main page</a>.
+        <a href={`${baseUrl}en/`}>the main page</a>.
     </p>
 </div>

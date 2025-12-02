@@ -38,8 +38,13 @@ export const ui = {
 } as const;
 
 export function getLangFromURL(url: URL) {
-    const [, lang] = url.pathname.split('/');
-    if (lang in ui) return lang as keyof typeof ui;
+    const pathParts = url.pathname.split('/').filter(Boolean);
+    
+    // Buscar 'es' o 'en' en las partes del path
+    // Esto funciona tanto para /es/ como para /portfolio/es/
+    const lang = pathParts.find(part => part in ui);
+    
+    if (lang && lang in ui) return lang as keyof typeof ui;
     return defaultLanguage;
 }
 
