@@ -1,27 +1,27 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 
-import react from '@astrojs/react';
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://gasparkral.github.io/portfolio/',
-    output: 'static',
-    base: '/portfolio/',
+  site: "https://gasparkral.github.io/portfolio/",
+  output: "static",
+  base: "/portfolio/",
 
-    vite: {
-        plugins: [tailwindcss()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  integrations: [react()],
+
+  i18n: {
+    locales: ["es", "en"],
+    defaultLocale: "es",
+    routing: {
+      prefixDefaultLocale: true,
     },
-
-    integrations: [react()],
-
-    i18n: {
-        locales: ['es', 'en'],
-        defaultLocale: 'es',
-        routing: {
-            prefixDefaultLocale: true,
-        },
-    },
+  },
 });

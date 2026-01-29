@@ -10,15 +10,15 @@ const t = useTranslation(lang);
 ---
 
 <section
-    class='flex flex-col items-center justify-center min-h-screen relative gap-8'
+    class='flex flex-col items-center justify-center min-h-screen relative gap-8 ' 
     id='hero'
 >
     <h1
-        class='whitespace-pre text-3xl font-extralight opacity-0'
+        class='md:whitespace-pre text-3xl text-center  font-extralight opacity-0'
         set:html={t('Hero.Title', { name: 'Gaspar Gómez Kral' })}
     />
     <div
-        class='flex gap-4 opacity-0'
+        class='flex flex-col md:flex-row items-center gap-4 opacity-0'
         id='fastContact'
     >
         <ClipboardEmail

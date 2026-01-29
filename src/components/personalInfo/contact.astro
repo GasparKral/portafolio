@@ -10,7 +10,7 @@ const lang = getLangFromURL(Astro.url);
 const t = useTranslation(lang);
 ---
 
-<section class='w-4xl items-start justify-center ml-auto flex flex-col gap-4'>
+<section class='md:w-4xl px-4 md:px-0 items-start justify-center ml-auto flex flex-col gap-4'>
     <h3
         set:html={t('Contact.Title')}
         class='font-bold text-2xl'
