@@ -13,9 +13,9 @@ const techs = (
     await getCollection('technologies', ({ id }) => id.startsWith('es'))
 ).sort((a, b) => b.data.rate - a.data.rate);
 
-const projects = (await getCollection('projects', ({ id }) =>
+const projects = await getCollection('projects', ({ id }) =>
     id.startsWith('es')
-));
+);
 ---
 
 <GeneralLayout>

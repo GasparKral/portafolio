@@ -1,6 +1,6 @@
 {
     "title": "Compose Desktop Router",
-    "description": "Un sistema de Routing para Jetpack Compose Desktop.",
+    "description": "An self designed router for Jetpack Compose Desktop applications.",
     "technologies": [
         "Kotlin",
         "Jetpack Compose Desktop",
