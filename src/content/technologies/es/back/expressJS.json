@@ -1,7 +1,7 @@
 {
     "scope": "backend",
     "name": "ExpressJS",
-    "description": "Express.js es un framework de aplicaciones web minimalista, rápido y flexible para Node.js. Ofrece un conjunto robusto de funciones para crear servidores web y API fácilmente. A menudo descrito como el framework de servidor estándar de facto para Node.js, simplifica tareas como la gestión de solicitudes HTTP (GET, POST, etc.), el enrutamiento y la integración con motores de plantillas y middleware. Su naturaleza minimalista permite a los desarrolladores estructurar sus aplicaciones a su gusto, añadiendo solo los componentes necesarios.",
+    "description": "Express.js is a minimal, fast, and flexible web application framework for Node.js. It provides a robust set of features to build web servers and APIs with ease.\nOften described as the 'de facto standard' server framework for Node.js, it simplifies tasks like handling HTTP requests (GET, POST, etc.), routing, and integrating with template engines and middleware. Its minimalistic nature allows developers to structure their applications as they see fit, adding only the necessary components.",
     "rate": 3,
     "ecosystem": "JavaScript"
 }

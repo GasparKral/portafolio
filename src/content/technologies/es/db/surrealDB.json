@@ -1,8 +1,8 @@
 {
     "scope": "database",
     "name": "SurrealDB",
-    "description": "SurrealDB es una base de datos nativa, de código abierto y multimodelo que le permite almacenar y administrar datos en modelos relacionales, de documentos, gráficos, de series de tiempo, vectoriales y de búsqueda, y geoespaciales, todo en un solo lugar.",
-    "opinion": "Es una tecnología interesante, pero creo que necesita algo de tiempo para madurar.",
+    "description": "SurrealDB is a native, open-source, multi-model database that lets you store and manage data across relational, document, graph, time-series, vector & search, and geospatial models—all in one place",
+    "opinion": "It's an interesting technology, but I feel that need some time to mature",
     "rate": 3,
     "ecosystem": "Data"
 }

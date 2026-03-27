@@ -1,7 +1,7 @@
 {
     "scope": "database",
     "name": "PostgreSQL",
-    "description": "PostgreSQL is an advanced, enterprise-class open-source relational database that supports both SQL (relational) and JSON (non-relational) querying",
+    "description": "PostgreSQL es una base de datos relacional avanzada, de código abierto y de clase empresarial que admite consultas SQL (relacionales) y JSON (no relacionales).",
     "rate": 4,
     "ecosystem": "SQL"
 }
