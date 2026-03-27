@@ -41,11 +41,11 @@ const TechnologiesContainer = ({
 						))}
 					</TabsList>
 					<Separator
-						className='mx-2 border opacity-0'
+						className='mx-2 border'
 						orientation='vertical'
 					/>
 					<Input
-						className='max-w-1/4 opacity-0'
+						className='max-w-1/4'
 						placeholder={seachPlaceholder}
 						type='text'
 						onChange={(e) => setInputValue(e.target.value)}
