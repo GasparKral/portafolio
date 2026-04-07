@@ -12,7 +12,8 @@ const t = useTranslation(lang);
 <section
     class='flex flex-col items-center justify-center min-h-screen relative gap-8 ' 
     id='hero'
->
+		>
+		<a class="absolute top-2 left-2 opacity-50" href={ import.meta.env.BASE_URL + "blog/" + lang + "/" }>{t('Hero.Gotoblog')}</a>
     <h1
         class='md:whitespace-pre text-3xl text-center  font-extralight opacity-0'
         set:html={t('Hero.Title', { name: 'Gaspar Gómez Kral' })}
