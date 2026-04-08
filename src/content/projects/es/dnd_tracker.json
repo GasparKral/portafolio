@@ -1,0 +1,9 @@
+{
+	"title":"DnD The Game Tracker",
+	"description":"Una aplicación para llevar la información de las partidas de rol, no como un motor completo, sino como un asistente del rol clásico",
+	"technologies":["Kotlin","Jetpack Compose","Rust","CSS"],
+	"links":{
+		"repository":"https://github.com/GasparKral/dnd_the_game_tracker"
+	},
+	"color":"#2b1e24"
+}

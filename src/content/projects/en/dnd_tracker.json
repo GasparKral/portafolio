@@ -1,0 +1,9 @@
+{
+	"title":"DnD The Game Tracker",
+	"description":"An application to keep track of role-playing game sessions, not as a full engine, but as a classic RPG assistant",
+	"technologies":["Kotlin","Jetpack Compose","Rust","CSS"],
+	"links":{
+		"repository":"https://github.com/GasparKral/dnd_the_game_tracker"
+	},
+	"color":"#2b1e24"
+}
