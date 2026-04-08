@@ -29,6 +29,7 @@ export const ui = {
     "Blog.Nav.Board": "Board",
     "Blog.Board.Title": "All entries",
     "Blog.Board.Empty": "No entries yet. Check back soon!",
+    "404": `Something went wrong, go back to <a href="${import.meta.env.BASE_URL + "en/"}" class="text-amber-300">Home</a>`,
   },
   es: {
     "General.DownloadCv": "Descarga mi CV",
@@ -53,6 +54,7 @@ export const ui = {
     "Blog.Nav.Board": "Tablón",
     "Blog.Board.Title": "Todas las entradas",
     "Blog.Board.Empty": "Aún no hay entradas. ¡Vuelve pronto!",
+    "404": `Parece que algo ha salido mal, vuelve a <a href="${import.meta.env.BASE_URL + "es/"}" class="text-amber-300">Inicio</a>`,
   },
 } as const;
 

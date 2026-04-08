@@ -1,0 +1,24 @@
+---
+import GeneralLayout from "@/layouts/generalLayout.astro";
+export function getStaticPaths() {
+  return [
+    { params: { lang: "es" } },
+    { params: { lang: "en" } },
+  ];
+}
+
+const { lang } = Astro.params;
+
+let t = useTranslation(lang as "es"|"en");
+---
+
+<GeneralLayout>
+	<main class="min-h-scren min-w-screen flex flex-col items-center justify-center">
+		<section class="flex flex-col items-center justify-center">
+			<h1 class="text-6xl font-bold">
+				404
+			</h1>
+			<p set:html={t('404')}>
+		</section>
+	</main>
+</GeneralLayout>
