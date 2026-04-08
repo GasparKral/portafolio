@@ -1,5 +1,7 @@
 ---
 import GeneralLayout from "@/layouts/generalLayout.astro";
+import { useTranslation } from "@/scripts/in18/hooks";
+
 export function getStaticPaths() {
   return [
     { params: { lang: "es" } },
