@@ -26,7 +26,7 @@ const TechnologiesContainer = ({
 
 			<Tabs
 				defaultValue={'frontend'}
-				className='gap-y-2 text-accent-foreground flex flex-col w-full px-4 md:px-0 md:w-4xl overflow-scroll backdrop-blur-md bg-background/80 rounded-md scrollbar-hide relative'
+				className='gap-y-2 text-accent-foreground flex flex-col w-full px-4 md:px-0 md:w-4xl overflow-scroll backdrop-blur-md  rounded-md scrollbar-hide relative'
 			>
 				<div className='flex py-0.5'>
 					<TabsList>

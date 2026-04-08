@@ -11,19 +11,28 @@ import {
 const LanguagePicker = ({
     className,
     currentLang,
+    translationUrl,
 }: {
     className?: string;
     currentLang: string;
+    translationUrl?: string;
 }) => {
     const defaultValue = currentLang === 'es' ? 'Español 🇪🇸' : 'English 🇬🇧';
 
     const handleChange = (newLang: string) => {
         if (newLang === currentLang) return;
-        const newPath = window.location.pathname.replace(
-            `/${currentLang}`,
-            `/${newLang}`
-        );
-        window.location.href = newPath;
+
+        if (translationUrl) {
+            // Navegar a la URL exacta de la traducción calculada en build time
+            window.location.href = import.meta.env.BASE_URL + translationUrl;
+        } else {
+            // Comportamiento genérico para páginas sin traducción específica (index, etc.)
+            const newPath = window.location.pathname.replace(
+                `/${currentLang}`,
+                `/${newLang}`
+            );
+            window.location.href = newPath;
+        }
     };
 
     return (

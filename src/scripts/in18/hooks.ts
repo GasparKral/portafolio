@@ -1,6 +1,6 @@
 export const languages = {
   en: "English",
-  es: "Spanish",
+  es: "Español",
 };
 
 export const defaultLanguage = "es";
@@ -27,6 +27,8 @@ export const ui = {
     "Contact.Social.Title": "And my socials",
     "Blog.Nav.Return": "Return to my portfolio",
     "Blog.Nav.Board": "Board",
+    "Blog.Board.Title": "All entries",
+    "Blog.Board.Empty": "No entries yet. Check back soon!",
   },
   es: {
     "General.DownloadCv": "Descarga mi CV",
@@ -49,6 +51,8 @@ export const ui = {
     "Contact.Social.Title": "Támbien mis redes",
     "Blog.Nav.Return": "Mi Portafolio",
     "Blog.Nav.Board": "Tablón",
+    "Blog.Board.Title": "Todas las entradas",
+    "Blog.Board.Empty": "Aún no hay entradas. ¡Vuelve pronto!",
   },
 } as const;
 

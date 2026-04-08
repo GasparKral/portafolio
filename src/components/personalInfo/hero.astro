@@ -1,12 +1,12 @@
 ---
-import { getLangFromURL, useTranslation } from '@/scripts/in18/hooks';
+import { useTranslation } from '@/scripts/in18/hooks';
 
 import { ArrowDown } from 'lucide-react';
 import { CvDownload } from './cvDowload';
 import { ClipboardEmail } from './clipboardEmail';
 
-const lang = getLangFromURL(Astro.url);
-const t = useTranslation(lang);
+const { lang } = Astro.params;
+const t = useTranslation(lang as "en"|"es");
 ---
 
 <section
@@ -36,7 +36,7 @@ const t = useTranslation(lang);
     >
         <ArrowDown className='w-6 h-6 text-primary/70' />
     </button>
-    <script type='module'>
+    <script is:inline type='module'>
         import {
             scroll,
             animate,
@@ -70,7 +70,7 @@ const t = useTranslation(lang);
                 { opacity: [0, 1], y: [-20, 0] },
                 { duration: 1, easing: 'ease-out' }
             );
-        }, 3000);
+        }, 1750);
 
         // Fade out section on scroll
         scroll(animate(container, { opacity: [1, 0] }), {

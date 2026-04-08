@@ -1,21 +1,19 @@
-import { defineCollection, reference, z } from "astro:content";
+import { defineCollection, reference } from "astro:content";
+import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 
 const blogEntries = defineCollection({
   loader: glob({
-    pattern: "**/*.json",
+    pattern: "**/*.md",
     base: "src/content/blogEntries/",
   }),
   schema: z.object({
     title: z.string(),
     preview_description: z.string(),
-    sections: z
-      .object({
-        title: z.string(),
-        text: z.string(),
-        footer: z.string().optional(),
-      })
-      .array(),
+    create_at: z.coerce.date(),
+    translationKey: z.string().optional(),
+    tags: z.array(z.string()).optional().default([]),
+    image: z.string().optional(),
   }),
 });
 
