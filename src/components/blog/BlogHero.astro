@@ -17,7 +17,7 @@ const formattedDate = date.toLocaleDateString(lang === 'es' ? 'es-ES' : 'en-US',
 });
 
 const slug = entry.id.split('/').slice(1).join('/');
-const href = `${import.meta.env.BASE_URL}blog/${lang}/${slug}`;
+const href = `${import.meta.env.BASE_URL}/blog/${lang}/${slug}`;
 
 const readLabel  = lang === 'es' ? 'Leer entrada' : 'Read entry';
 const latestLabel = lang === 'es' ? 'Última entrada' : 'Latest entry';
