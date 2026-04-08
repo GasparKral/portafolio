@@ -1,5 +1,5 @@
 ---
-title: Dungeon Master, un pasatiempo que puede decir mucho de ti
+title: Dungeon Master, a hobby that can say a lot about you
 preview_description: Learn about wich skills you develop while guiding other thought a changing world.
 translationKey: dnd
 create_at: 2026-04-08T13:39:00.000z
