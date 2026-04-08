@@ -1,6 +1,6 @@
 ---
 title: Dungeon Master, un pasatiempo que puede decir mucho de ti
-preview_description: Aprende sobre que habilidades adquieres al guiar a otros por un mundo cambiante.
+preview_description: Learn about wich skills you develop while guiding other thought a changing world.
 translationKey: dnd
 create_at: 2026-04-08T13:39:00.000z
 ---
