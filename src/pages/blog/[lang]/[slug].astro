@@ -1,0 +1,92 @@
+---
+import BlogLayout from '@/layouts/blogLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { useTranslation } from '@/scripts/in18/hooks';
+
+export async function getStaticPaths() {
+  const allEntries = await getCollection('blogEntries');
+
+  return allEntries.map((entry) => {
+    const [lang, ...slugParts] = entry.id.split('/');
+    const slug = slugParts.join('/');
+
+    // Buscar la traducción por translationKey
+    const otherLang = lang === 'es' ? 'en' : 'es';
+    const translatedEntry = entry.data.translationKey
+      ? allEntries.find(
+          (e) =>
+            e.id.startsWith(otherLang + '/') &&
+            e.data.translationKey === entry.data.translationKey
+        )
+      : undefined;
+
+    const translationUrl = translatedEntry
+      ? `blog/${otherLang}/${translatedEntry.id.split('/').slice(1).join('/')}`
+      : undefined;
+
+    return {
+      params: { lang, slug },
+      props: { entry, translationUrl },
+    };
+  });
+}
+
+const { lang, slug } = Astro.params;
+const { entry, translationUrl } = Astro.props;
+
+const { Content } = await render(entry);
+const t = useTranslation(lang as 'es' | 'en');
+
+const formattedDate = entry.data.create_at.toLocaleDateString(
+  lang === 'es' ? 'es-ES' : 'en-US',
+  { year: 'numeric', month: 'long', day: 'numeric' }
+);
+
+const boardHref = `${import.meta.env.BASE_URL}blog/${lang}/`;
+---
+
+<BlogLayout translationUrl={translationUrl}>
+  <main class="max-w-3xl mx-auto px-4 md:px-8 py-10 pt-20 flex flex-col gap-10">
+
+    <!-- Header del post -->
+    <header class="flex flex-col gap-4 pb-8 border-b border-border">
+      <a
+        href={boardHref}
+        class="self-start flex items-center gap-1.5 text-xs text-muted-foreground hover:text-accent transition-colors duration-200 group"
+      >
+        <svg class="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+        </svg>
+        {t('Blog.Nav.Board')}
+      </a>
+
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="text-xs text-muted-foreground">{formattedDate}</span>
+        {entry.data.tags && entry.data.tags.length > 0 && (
+          <>
+            <span class="text-muted-foreground/40">·</span>
+            {entry.data.tags.map(tag => (
+              <span class="text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">
+                {tag}
+              </span>
+            ))}
+          </>
+        )}
+      </div>
+
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight text-foreground">
+        {entry.data.title}
+      </h1>
+
+      <p class="text-base text-muted-foreground leading-relaxed">
+        {entry.data.preview_description}
+      </p>
+    </header>
+
+    <!-- Contenido markdown renderizado -->
+    <article class="blog-content">
+      <Content />
+    </article>
+
+  </main>
+</BlogLayout>

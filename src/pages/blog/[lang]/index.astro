@@ -1,0 +1,86 @@
+---
+import BlogLayout from '@/layouts/blogLayout.astro';
+import BlogHero from '@/components/blog/BlogHero.astro';
+import BlogHeroSkeleton from '@/components/blog/BlogHeroSkeleton.astro';
+import BlogEntryCard from '@/components/blog/BlogEntryCard.astro';
+import BlogEntryCardSkeleton from '@/components/blog/BlogEntryCardSkeleton.astro';
+
+import { useTranslation } from '@/scripts/in18/hooks';
+import { getCollection } from 'astro:content';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params;
+
+// Get all entries for this language, sorted by most recent date descending
+const allEntries = (
+  await getCollection('blogEntries', ({ id }) => id.startsWith(lang))
+).sort((a, b) => b.data.create_at.getTime() - a.data.create_at.getTime());
+
+const heroEntry = allEntries[0] ?? null;
+const gridEntries = allEntries.slice(1);
+
+let t = useTranslation(lang as 'es' | 'en');
+
+// How many skeleton cards to show in grid (simulate 8 slots)
+const SKELETON_COUNT = 6;
+---
+
+<BlogLayout>
+  <main class="max-w-7xl mx-auto px-4 md:px-8 py-10 pt-20 flex flex-col gap-12">
+
+    <!-- ── Hero: latest entry or skeleton ── -->
+    <section>
+      {heroEntry
+        ? <BlogHero entry={heroEntry} lang={lang} />
+        : <BlogHeroSkeleton />
+      }
+    </section>
+
+    <!-- ── Grid: rest of entries ── -->
+    <section class="flex flex-col gap-6">
+      <h2 class="text-xl font-semibold text-foreground tracking-tight">
+        {t('Blog.Board.Title')}
+      </h2>
+
+      {allEntries.length === 0 ? (
+        <!-- Full skeleton grid when no entries exist -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 auto-rows-fr">
+          {Array.from({ length: SKELETON_COUNT }).map((_, i) => (
+            <BlogEntryCardSkeleton />
+          ))}
+        </div>
+
+        <p class="text-center text-sm text-muted-foreground mt-4">
+          {t('Blog.Board.Empty')}
+        </p>
+
+      ) : gridEntries.length > 0 ? (
+        <!-- Real grid with remaining entries -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 auto-rows-fr">
+          {gridEntries.map((entry) => (
+            <BlogEntryCard entry={entry} lang={lang} />
+          ))}
+        </div>
+
+      ) : (
+        <!-- Only one entry exists (shown in hero), show skeleton grid as placeholder -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 auto-rows-fr opacity-50">
+          {Array.from({ length: SKELETON_COUNT }).map(() => (
+            <BlogEntryCardSkeleton />
+          ))}
+        </div>
+
+        <p class="text-center text-sm text-muted-foreground mt-4">
+          {t('Blog.Board.Empty')}
+        </p>
+      )}
+    </section>
+
+  </main>
+</BlogLayout>

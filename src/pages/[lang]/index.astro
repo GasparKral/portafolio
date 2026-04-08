@@ -1,0 +1,50 @@
+---
+import GeneralLayout from '@/layouts/generalLayout.astro';
+import TechnologiesContainer from '../../components/technologies/container';
+import Hero from '@/components/personalInfo/hero.astro';
+import AbouteMe from '@/components/personalInfo/abouteMe.astro';
+import Contact from '@/components/personalInfo/contact.astro';
+
+import { getCollection } from 'astro:content';
+import { techScopeEnum } from '../../content.config';
+import { ProjectsContainer } from '@/components/projects/container';
+import { useTranslation } from "@/scripts/in18/hooks";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "es" } },
+    { params: { lang: "en" } },
+  ];
+}
+
+const { lang } = Astro.params;
+
+const techs = (
+    await getCollection('technologies', ({ id }) => id.startsWith(lang))
+).sort((a, b) => b.data.rate - a.data.rate);
+
+const projects = await getCollection('projects', ({ id }) =>
+    id.startsWith(lang)
+	);
+
+let t = useTranslation(lang as "es"|"en");
+---
+
+<GeneralLayout>
+    <Hero />
+    <AbouteMe />
+    <TechnologiesContainer
+		title={t('Tech.Title')}
+		seachPlaceholder={t('Tech.Placeholder')}
+		techs={techs}
+		tabs={techScopeEnum.options}
+		client:load
+    />
+    <ProjectsContainer
+		title={t('Project.Title')}
+        projects={projects}
+        labels={[t('Project.Label.1'),t('Project.Label.2')]}
+        client:load
+    />
+    <Contact client:load />
+</GeneralLayout>

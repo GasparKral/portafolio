@@ -1,0 +1,83 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { slugToGradient } from '@/lib/gradients';
+
+interface Props {
+  entry: CollectionEntry<'blogEntries'>;
+  lang: string;
+}
+
+const { entry, lang } = Astro.props;
+
+const formattedDate = entry.data.create_at.toLocaleDateString(
+  lang === 'es' ? 'es-ES' : 'en-US',
+  { year: 'numeric', month: 'long', day: 'numeric' }
+);
+
+const slug = entry.id.split('/').slice(1).join('/');
+const href = `${import.meta.env.BASE_URL}blog/${lang}/${slug}`;
+
+const hasCover = !!entry.data.image;
+const fallbackGradient = slugToGradient(slug);
+---
+
+<a
+  href={href}
+  class="group relative flex flex-col rounded-xl border border-border bg-card overflow-hidden
+    hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-xl hover:shadow-accent/10
+    transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+>
+  <!-- Cover: imagen o gradiente -->
+  <div class="relative w-full h-32 overflow-hidden flex-shrink-0">
+    {hasCover ? (
+      <img
+        src={entry.data.image}
+        alt={entry.data.title}
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    ) : (
+      <div
+        class="w-full h-full transition-transform duration-500 group-hover:scale-105"
+        style={`background: ${fallbackGradient};`}
+      />
+    )}
+    <!-- Overlay sutil -->
+    <div class="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent" />
+  </div>
+
+  <!-- Body -->
+  <div class="flex flex-col gap-2.5 p-4 flex-1">
+
+    <!-- Tags -->
+    {entry.data.tags && entry.data.tags.length > 0 && (
+      <div class="flex flex-wrap gap-1.5">
+        {entry.data.tags.map(tag => (
+          <span class="text-[9px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">
+            {tag}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <!-- Title -->
+    <h3 class="text-sm font-semibold leading-snug text-foreground group-hover:text-accent transition-colors duration-200 line-clamp-2">
+      {entry.data.title}
+    </h3>
+
+    <!-- Preview description -->
+    <p class="text-xs text-muted-foreground leading-relaxed line-clamp-3 flex-1">
+      {entry.data.preview_description}
+    </p>
+
+    <!-- Footer: date + arrow -->
+    <div class="flex items-center justify-between pt-2.5 border-t border-border mt-auto">
+      <span class="text-[10px] text-muted-foreground">{formattedDate}</span>
+      <svg
+        class="w-3.5 h-3.5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all duration-200"
+        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </div>
+  </div>
+</a>
