@@ -1,10 +1,10 @@
 ---
 import SocialLink from '@/components/personalInfo/socialLink.astro';
+import CvDownload from './cvDownload.astro';
 
 import { Instagram, Github, Linkedin } from 'lucide-react';
 import { getLangFromURL, useTranslation } from '@/scripts/in18/hooks';
 import { ClipboardEmail } from './clipboardEmail';
-import { CvDownload } from './cvDowload';
 
 const lang = getLangFromURL(Astro.url);
 const t = useTranslation(lang);
@@ -21,7 +21,7 @@ const t = useTranslation(lang);
             succesMessage={t('General.EmailCopied')}
             errorMessage={t('General.EmailCopyError')}
         />
-        <CvDownload text={t('General.DownloadCv')} />
+		<CvDownload text={t('General.DownloadCv')} lang={lang}/>
     </div>
     <article>
         <header>
