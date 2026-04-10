@@ -1,0 +1,13 @@
+---
+const {text,lang} = Astro.props;
+const f_lang = (lang as string).toLocaleUpperCase();
+---
+
+<a
+	href={`${import.meta.env.BASE_URL}/files/CV_${f_lang}.docx`}
+	target='_blank'
+	rel='noopener noreferrer'
+	class='p-2 rounded-xs hover:text-primary/60 hover:bg-input/50 active:bg-accent bg-input active:text-primary transition-colors duration-200 flex items-center cursor-pointer '
+>
+	{text}
+</a>
