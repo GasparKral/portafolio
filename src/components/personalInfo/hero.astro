@@ -1,9 +1,16 @@
 ---
-import { useTranslation } from '@/scripts/in18/hooks';
+import CVDownload from "@/components/personalInfo/cvDownload.astro";
 
+import { useTranslation } from '@/scripts/in18/hooks';
 import { ArrowDown } from 'lucide-react';
-import { CvDownload } from './cvDowload';
 import { ClipboardEmail } from './clipboardEmail';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "es" } },
+    { params: { lang: "en" } },
+  ];
+}
 
 const { lang } = Astro.params;
 const t = useTranslation(lang as "en"|"es");
@@ -28,7 +35,7 @@ const t = useTranslation(lang as "en"|"es");
             errorMessage={t('General.EmailCopyError')}
             client:load
         />
-        <CvDownload text={t('General.DownloadCv')} />
+		<CVDownload text={t('General.DownloadCv')} lang={lang as string}/>
     </div>
     <button
         class='absolute bottom-10 animate-bounce duration-10000 ease-[cubic-bezier(0,.98,.23,1.38)] cursor-pointer'
