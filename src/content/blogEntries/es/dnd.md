@@ -7,13 +7,9 @@ create_at: 2026-04-08T13:39:00.000z
 
 Hace ya unos cuantos meses que comencé, junto a un grupo de amigos, nuestra travesía por las imaginativas aventuras de los juegos de rol. Hacía tiempo que queríamos hacer algo por el estilo, pero siempre lo postergábamos.
 
----
-
 ## Los primeros perdidos
 
 Cuando lo propusimos al principio, muchos de los integrantes —probablemente con un mal concepto de en qué consistía o del tiempo que requiere— se apuntaron con energía. Esto llevó al primero de los problemas: mucha gente significa que los turnos serán largos, más aún cuando todos somos novatos.
-
----
 
 ## ¿Qué se puede aprender?
 
@@ -32,13 +28,9 @@ A medida que he ido avanzando, he aplicado la misma lógica que con la creación
 
 **La improvisación**. Nunca pensé que esa sería la habilidad que más desarrollaría y, a su vez, una de las que más provecho le he sacado fuera del juego. Ser capaz de reaccionar ante lo inesperado y tomar decisiones sólidas es realmente desafiante, pero una vez que comienzas a dominarlo, resulta incluso divertido. Volviendo al juego, puede llevarte a historias que de otra forma habría sido imposible desarrollar por mí mismo, y eso es lo que más me gusta.
 
----
-
 Otras habilidades menores que se pueden aprender son el manejo de la frustración y comprender que muchas veces importa más el resultado final que el esfuerzo invertido en perfeccionar algo. Desde un punto de vista más administrativo, también se pueden aprender cosas como cuándo recompensar o castigar a alguien para que tenga un impacto beneficioso en su desempeño o desarrollo.
 
 Relacionado con esto, tengo una anécdota: mis jugadores son altamente codiciosos, hasta el punto de que llega a ser molesto tener que pelear por cualquier botín o que regateen hasta las monedas de cobre a los mercaderes que les presento. Por ello, tomé la decisión de que, si querían tanto sus recompensas, lo harían bajo su propia responsabilidad, castigando su codicia con enemigos realmente difíciles o mercaderes que inflan exageradamente sus precios.
-
----
 
 ## Reflexión
 

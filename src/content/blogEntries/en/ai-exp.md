@@ -21,10 +21,10 @@ And all this only talking about the short term. If we look a little further ahea
 # Is it all bad criticism?
 
 It might seem that I hate using ChatGPT or Claude with all my soul, among others, but that's far from reality. In fact, I use it practically every day, but in very controlled and specific ways. Regarding this, I conducted an experiment: [seeing my previous post](https://gasparkral.github.io/portafolio/blog/es/dnd/), you'll know that I like role-playing games, more specifically Dungeons & Dragons. Among other things, I decided to make an application to help me in my fantasy adventures, and for that I used Claude, but not just as an assistant, but specifically doing what I said above: detailing what I want and having Claude implement it as it sees fit as optimal. What did I find at the end of this process?
-    1. D&D is really very complex to program, it has too many specific cases.
-    2. When I ran out of TOKENs, well, nothing to do but wait until the next day to continue; a real case of maximum productivity.
-    3. The graphical interface is the most generic thing I've ever seen. Despite giving artistic directions to make an interesting application, it had zero personality.
-    4. The application works so-so; the mobile part leaves much to be desired, and the desktop part... well, it's "usable."
+1. D&D is really very complex to program, it has too many specific cases.
+2. When I ran out of TOKENs, well, nothing to do but wait until the next day to continue; a real case of maximum productivity.
+3. The graphical interface is the most generic thing I've ever seen. Despite giving artistic directions to make an interesting application, it had zero personality.
+4. The application works so-so; the mobile part leaves much to be desired, and the desktop part... well, it's "usable."
 Some will say I wasn't specific enough, that I surely didn't explain things well, that it lacked context... The truth is, after a 13-page manual in Calibri 11, and direct access to my drive so it could read files if it needed more context, if it's not capable of doing the job, it's hard to place the blame.
 
 LLMs, in my opinion, should not be substitutes for one's own work. I still remember when they started being used in IDE autocompletion systems; right there I began to feel effects I didn't like: standing still waiting for the autocompletion to appear, as if I had forgotten the syntax of a language I had spent many hours working on. Honestly, I think the best use is explanatory: having a teacher who can adjust to your exact level, who can create examples on the spot if you don't understand something when studying a new technology, or for very repetitive tasks, where the context is similar enough for the LLM to do it alone without generating errors. Those are good points.
@@ -43,6 +43,7 @@ This one has a bit of a trick. I use it for repetitive tasks, or those that requ
 Finally, the big one, the one I've worked the most to the point that I got blocked for three days. If guided, it can do good work that doesn't require investing much time afterward. I use it as follows: as I said, in its desktop version, it allows you to create "Projects," where you can add a lot of initial context, you can tell it the development tone to use, adjust the memory of conversations, and among other things, give it abilities through *MCPs* like reading or writing files. First, I prepare the project context, I tell it what is going to be developed, what is expected of the model. Then I give it a list of rules it must comply with, among which the most notable are:
 - Do not modify files without explicit consent; I do this so that it allows me to read what it's going to do before launching.
 - After any request, make a summarized explanation of what it's going to do, how, and what context it needs to develop it; I know this burns many TOKENs, but this way I can correct before moving to the next activity, which has saved me several times.
+
 Another thing I like to do is use a personalized writing tone: basically, it acts as a senior mentor. When I ask it a question regarding knowledge, it doesn't give me the answer directly; instead, it asks me questions to guide me to the answer myself. If it sees that I'm not capable, it answers me directly, and then asks me a hypothetical question about the case to make sure I've understood it.
 
 With these adjustments, I can work without fear of going in blind.

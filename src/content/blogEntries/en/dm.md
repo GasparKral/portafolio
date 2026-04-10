@@ -7,13 +7,9 @@ create_at: 2026-04-08T13:39:00.000z
 
 It’s been a few months now since I started, together with a group of friends, our journey through the imaginative adventures of tabletop role-playing games. We had wanted to do something like this for a long time, but we always ended up postponing it.
 
----
-
 ## The early setbacks
 
 When we first proposed it, many of the participants—probably with a vague or inaccurate idea of what it actually involved, or the time it required—joined enthusiastically. This led to the first problem: too many people means longer turns, especially when everyone is new.
-
----
 
 ## What can you learn?
 
@@ -32,13 +28,9 @@ As time went on, I applied the same approach I used when building the world: I n
 
 **Improvisation.** I never thought this would become the skill I would develop the most, and at the same time one of the most useful outside the game. Being able to react to the unexpected and make solid decisions on the spot is truly challenging, but once you get the hang of it, it even becomes fun. In the context of the game, it can lead to stories that I would have never been able to create on my own—and that’s what I enjoy the most.
 
----
-
 Other smaller skills you can develop include managing frustration and understanding that the final outcome often matters more than the effort spent perfecting something. From a more administrative perspective, you also learn when to reward or punish someone in a way that positively impacts their performance or development.
 
 On that note, I have a small anecdote: my players are extremely greedy—sometimes to the point where it becomes annoying to negotiate every piece of loot or watch them haggle over copper coins with every merchant I introduce. Because of this, I decided that if they wanted their rewards that badly, they would have to face the consequences. I started punishing their greed with particularly difficult enemies or merchants who heavily inflate their prices.
-
----
 
 ## Reflection
 
