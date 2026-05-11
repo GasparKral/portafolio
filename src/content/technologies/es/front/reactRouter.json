@@ -1,0 +1,8 @@
+{
+    "scope": "frontend",
+    "name": "React Router",
+    "description": "React Router es la librería de enrutado estándar para aplicaciones React. En su modo declarativo permite definir rutas anidadas, protegidas y con layouts compartidos de forma clara y composable, sin la complejidad del modo framework.",
+    "opinion": "El modo declarativo de React Router v7 es exactamente lo que necesito para SPAs con autenticación por roles: limpio, predecible y sin magia.",
+    "rate": 4,
+    "ecosystem": "React"
+}

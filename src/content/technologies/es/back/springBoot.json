@@ -1,0 +1,8 @@
+{
+    "scope": "backend",
+    "name": "Spring Boot",
+    "description": "Spring Boot es un framework de Java que simplifica el desarrollo de aplicaciones empresariales al proporcionar configuración automática, un servidor embebido y un ecosistema maduro de módulos para seguridad, persistencia, mensajería y más. Permite construir APIs REST robustas siguiendo principios de Clean Architecture con muy poco boilerplate.",
+    "opinion": "Spring Boot es el estándar del mercado Java empresarial. Su ecosistema es inmenso y la curva de aprendizaje vale la pena: una vez dominado, permite construir backends sólidos y mantenibles con rapidez.",
+    "rate": 4,
+    "ecosystem": "Java"
+}

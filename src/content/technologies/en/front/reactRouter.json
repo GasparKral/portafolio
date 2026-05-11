@@ -1,0 +1,8 @@
+{
+    "scope": "frontend",
+    "name": "React Router",
+    "description": "React Router is the standard routing library for React applications. In its declarative mode it allows defining nested, protected and shared-layout routes in a clear and composable way, without the complexity of framework mode.",
+    "opinion": "React Router v7 declarative mode is exactly what I need for role-based auth SPAs: clean, predictable and without magic.",
+    "rate": 4,
+    "ecosystem": "React"
+}

@@ -1,0 +1,17 @@
+{
+    "title": "StockMate",
+    "description": "Full-stack inventory management panel for small businesses. Tracks stock levels, registers entry and exit movements, and triggers automatic alerts when a product falls below its minimum threshold. Clean Architecture backend (Java 21 + Spring Boot) and role-based SPA (ADMIN/OPERATOR) built with React 19.",
+    "links": {
+        "repository": "https://github.com/GasparKral/stockmate"
+    },
+    "technologies": [
+        "SpringBoot",
+        "PostgreSQL",
+        "React",
+        "ReactRouter",
+        "Zustand",
+        "Tailwind",
+        "Docker"
+    ],
+    "color": "#1D6FB8"
+}

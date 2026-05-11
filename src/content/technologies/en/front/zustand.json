@@ -1,0 +1,8 @@
+{
+    "scope": "frontend",
+    "name": "Zustand",
+    "description": "Zustand is a minimalist, boilerplate-free global state management library for React. Unlike Redux, it requires no reducers or actions: state is defined as a simple object with functions that modify it. Compatible with persistence middleware to sync the store with localStorage.",
+    "opinion": "Zustand is my favourite state library in React. It's simple, straightforward and doesn't force folder structures or rigid conventions on you.",
+    "rate": 5,
+    "ecosystem": "React"
+}
